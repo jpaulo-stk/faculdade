@@ -1,0 +1,51 @@
+
+/*Exerc 1*/
+select * from produto p 
+where UNIDADE = 'UN'
+
+/*Exerc 2*/
+select * from produto p 
+where p.CODIGO_CLASSIFICACAO = 020 and QUANTIDADE > 20
+
+/*Exerc 3*/
+select * from produto p 
+where p.CODIGO_CLASSIFICACAO = 003 and DESCRICAO like '%bala%' and QUANTIDADE > 6
+
+/*Exerc 4*/
+select * from produto p 
+where DESCRICAO like '%martelo%' and not CODIGO_CLASSIFICACAO = 001
+
+/*Exerc 5*/
+select * from produto p 
+where CODIGO_CLASSIFICACAO = 002 and UNIDADE = 'cx' and QUANTIDADE < 5
+
+/*Exerc 6*/
+select * from produto p 
+where CODIGO_CLASSIFICACAO = 002 and not UNIDADE = 'cx' and QUANTIDADE >= 10 and QUANTIDADE <= 50
+
+/*Exerc 7*/
+select * from produto p
+where CODIGO_CLASSIFICACAO = 021 and DESCRICAO like '%camiseta%' or CODIGO_CLASSIFICACAO = 008 and DESCRICAO like '%bola%'
+
+/*Exerc 8*/
+select * from produto p
+where CODIGO_CLASSIFICACAO = 003 and UNIDADE = 'pct'
+
+/*Exerc 9*/
+select UNIDADE from produto p
+where CODIGO_CLASSIFICACAO = 006
+group by UNIDADE
+
+/*Exerc 10*/
+select * from produto p
+where QUANTIDADE > 6 and QUANTIDADE < 10 
+
+/*Exerc 11*/
+select * from produto p
+where DESCRICAO like 'oleo%' and UNIDADE = 'L'
+
+/*Exerc 12*/
+select *, (QUANTIDADE * VALOR) as total from produto p
+where CODIGO_CLASSIFICACAO = 015 and UNIDADE = 'CX'
+
+
